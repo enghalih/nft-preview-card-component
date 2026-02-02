@@ -1,0 +1,181 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+html {
+  font-size: 62.5%;
+  min-height: 100vh;
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  background-color: #0D192C;
+  color: #FFFFFF;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.45;
+  letter-spacing: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+.card {
+  background-color: #15263F;
+  width: 30rem;
+  border-radius: 15px;
+  padding: 2.4rem;
+  display: grid;
+  gap: 2.4rem;
+}
+.card__image {
+  border-radius: 8px;
+}
+.card__image-container {
+  position: relative;
+}
+.card__view {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 300ms ease, background-color 300ms ease;
+  background-color: transparent;
+}
+.card__view:hover {
+  background-color: hsla(178, 100%, 50%, 0.5);
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .card__view {
+    transition: none;
+  }
+}
+.card__header {
+  display: grid;
+  gap: 1.6rem;
+}
+.card__title {
+  font-family: "Outfit", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+.card__title:hover {
+  color: #00FFF8;
+}
+.card__description {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.45;
+  letter-spacing: 0;
+  color: #8BACD9;
+}
+.card__info {
+  display: flex;
+  justify-content: space-between;
+}
+.card__price-container {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #00FFF8;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+.card__time-container {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  color: #8BACD9;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+.card__author-container {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+.card__avatar {
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+  width: 3.3rem;
+  aspect-ratio: 1/1;
+}
+.card__author-text {
+  color: #8BACD9;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 0;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+.card__author-name {
+  color: #FFFFFF;
+}
+.card__author-name:hover {
+  color: #00FFF8;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #2E405A;
+}
+
+/*# sourceMappingURL=style.css.map */
